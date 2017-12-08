@@ -1,0 +1,5 @@
+SELECT COUNT(id) FROM evaluaciones WHERE id_proyecto = 514 AND id_concurso = 1 GROUP BY id_evaluador, id_proyecto, id_concurso
+
+SELECT SUM(calificacion_maxima) FROM rubricas WHERE id_concurso = 1 GROUP BY id_concurso
+
+SELECT SUM(calificacion) FROM evaluaciones WHERE id_concurso = 1 AND id_proyecto = 514 GROUP BY id_concurso, id_proyecto

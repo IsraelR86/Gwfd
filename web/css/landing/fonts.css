@@ -1,0 +1,28 @@
+
+/*
+File Fonts 
+
+*/
+@font-face {
+    font-family: 'brando';
+    src: url('../fonts/Brandon_bld.otf');
+    font-weight: bold;
+}
+
+
+@font-face {
+    font-family: 'brandonblack';
+    src: url('../fonts/Brandon_blk.otf');
+
+}
+
+@font-face {
+    font-family: 'brandonlight';
+    src: url('../fonts/Brandon_light.otf');
+     font-weight: light;
+}
+@font-face {
+    font-family: 'brandonmed';
+    src: url('../fonts/Brandon_med.otf');
+     font-weight: medium;
+}

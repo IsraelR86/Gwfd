@@ -1,0 +1,3 @@
+[13-May-2017 18:25:53 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/mail/layouts/html.php on line 8
+[13-May-2017 18:25:53 UTC] PHP Stack trace:
+[13-May-2017 18:25:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/mail/layouts/html.php:0

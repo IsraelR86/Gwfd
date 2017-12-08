@@ -1,0 +1,21 @@
+[02-May-2017 15:31:06 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/views/site/login.php on line 16
+[02-May-2017 15:31:06 UTC] PHP Stack trace:
+[02-May-2017 15:31:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/site/login.php:0
+[06-May-2017 06:39:28 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/views/site/login.php on line 16
+[06-May-2017 06:39:28 UTC] PHP Stack trace:
+[06-May-2017 06:39:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/site/login.php:0
+[06-May-2017 06:39:31 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/views/site/login.php on line 16
+[06-May-2017 06:39:31 UTC] PHP Stack trace:
+[06-May-2017 06:39:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/site/login.php:0
+[06-May-2017 06:39:31 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/views/site/login.php on line 16
+[06-May-2017 06:39:31 UTC] PHP Stack trace:
+[06-May-2017 06:39:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/site/login.php:0
+[06-May-2017 06:47:21 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/views/site/login.php on line 16
+[06-May-2017 06:47:21 UTC] PHP Stack trace:
+[06-May-2017 06:47:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/site/login.php:0
+[06-May-2017 06:47:24 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/views/site/login.php on line 16
+[06-May-2017 06:47:24 UTC] PHP Stack trace:
+[06-May-2017 06:47:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/site/login.php:0
+[06-May-2017 06:47:24 UTC] PHP Fatal error:  Using $this when not in object context in /home/ubuntu/workspace/views/site/login.php on line 16
+[06-May-2017 06:47:24 UTC] PHP Stack trace:
+[06-May-2017 06:47:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/views/site/login.php:0

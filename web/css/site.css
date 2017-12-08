@@ -1,0 +1,1330 @@
+/******** INICIO Reglas Generales *************/
+@font-face {
+    font-family: 'CooperHewitt-Bold';
+    src: url('fonts/CooperHewitt-Bold.eot'); /* IE9 Compat Modes */
+    src: url('fonts/CooperHewitt-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/CooperHewitt-Bold.otf')        format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'AvenirNext-DemiBold';
+    src: url('fonts/avenirnextdemibold.eot'); /* IE9 Compat Modes */
+    src: url('fonts/avenirnextdemibold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/avenirnextdemibold.woff')       format('woff'), /* Modern Browsers */
+         url('fonts/avenirnextdemibold.ttf')        format('truetype'); /* Safari, Android, iOS */
+         /* url('fonts/.svg#svgFontName') format('svg');*/ /* Legacy iOS */
+}
+@font-face {
+    font-family: 'AvenirNext-Regular';
+    src: url('fonts/avenirnextregular.eot'); /* IE9 Compat Modes */
+    src: url('fonts/avenirnextregular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/avenirnextregular.woff')       format('woff'), /* Modern Browsers */
+         url('fonts/avenirnextregular.ttf')        format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'CooperHewitt-Book';
+    src: url('fonts/CooperHewitt-Book.otf');
+}
+@font-face {
+    font-family: 'CooperHewitt-SemiBold';
+    src: url('fonts/CooperHewitt-Semibold.otf');
+}
+body {
+    color: #293332;
+    font-family: 'CooperHewitt-Book';
+    font-size: 13pt;
+}
+/* Color rojo al texto (no definido) que se coloca en las celdas, de un gridview, que no tienen un valor */
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+/* Le agrega el cursos de prohibido a los elementos que este como readonly o disabled*/
+input[readonly], input[disabled],
+select[readonly], select[disabled]{
+    cursor: not-allowed !important;
+}
+/* Estilo a la div donde se muestra el error despues procesar un formulario */
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+/* Para simular un input disabled en el form utilizando un well-sm */
+form .well-sm {
+    padding: 6px !important;
+    margin-bottom: 16px;
+    cursor: not-allowed;
+    font-size: 14px;
+    color: #858585;
+}
+/* Agrega iconos de ordenar a los enlaces de los encabezados del gridview */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+a.asc:after {
+    content: "\e151";
+}
+a.desc:after {
+    content: "\e152";
+}
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+.noPaddingLeft {
+    padding-left: 0px !important;
+}
+.noPaddingRight {
+    padding-right: 0px !important;
+}
+.noPadding {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.btnBorderRed {
+    border: solid 2px #EB585A;
+    font-weight: bold;
+    min-width: 100px;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    margin: 2px;
+    min-height: 40px;
+    text-align: center;
+    padding-top: 5pt;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+.btnBorderRed.btnProyectoNuevo,
+.btnBorderRed.btnConcursoNuevo
+{
+    background: #EB585A;
+}
+.btnBorderRed.btnProyectoNuevo i,
+.btnBorderRed.btnConcursoNuevo i{
+    color: #fff;
+}
+.btnBorderRed.small {
+    min-width: 40px;
+}
+.btnBorderBlue {
+    border: solid 2px #3297CA;
+    font-weight: bold;
+    min-width: 135px;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    min-height: 40px;
+    text-align: center;
+    padding-top: 5pt;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+.btnBorderRed:hover,
+.btnBorderRed:active,
+.btnBorderRed:focus,
+.btnBorderRed:visited,
+.btnBorderBlue:hover,
+.btnBorderBlue:active,
+.btnBorderBlue:focus,
+.btnBorderBlue:visited {
+    text-decoration: initial;
+    color: white;
+}
+.btnBorderRed.fontBlack,
+.btnBorderRed.fontBlack:hover,
+.btnBorderRed.fontBlack:active,
+.btnBorderRed.fontBlack:focus,
+.btnBorderRed.fontBlack:visited {
+    color: black;
+}
+#sidebar .btnBorderRed {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+.btnBorderRed.inline-block {
+    display: inline-block !important;
+}
+.bgBodyInfo {
+    background-color: #F2F2F2;
+}
+.icon {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    cursor: pointer;
+    color: #EB585A;
+}
+.icon img {
+    width: 100%;
+    height: 100%;
+}
+ul.PaddingLeft,
+ol.PaddingLeft {
+    padding-left: 19px !important;
+}
+.form-control {
+    margin-bottom: 5px;
+}
+.form-control.left {
+    display: inline-block;
+    width: 45%;
+    float: left;
+    margin-right: 10px
+}
+.width350 {
+    width: 350px;
+}
+.margin-auto {
+    margin: auto;
+}
+.width80porc {
+    width: 80%;
+}
+.width100porc {
+    width: 100%;
+}
+.width95porc {
+    width: 95%;
+}
+.colorGray {
+    color: #CCC;
+}
+.colorBlack {
+    color: #293332
+}
+.redBox {
+    background-color: #EE5656;
+    color: white;
+    padding: 6px;
+}
+.blueBox {
+    background-color: #3297CA;
+    color: white;
+    padding: 6px;
+}
+.bgBlack {
+    background-color: #293332;
+    color: white;
+}
+.bgGray {
+    background-color: #F2F2F2;
+}
+.bgRed {
+    background-color: #EE5656;
+}
+.colorRed {
+    color: #EB585A;
+}
+/**
+  * Centrado Vertical
+  * http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+  */
+.vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%)
+}
+b, strong {
+    font-family: CooperHewitt-Bold;
+}
+.marginRight {
+    margin-right: 15px;
+}
+.marginLeft {
+    margin-left: 15px;
+}
+.vertical-middle {
+    vertical-align: middle;
+}
+table th {
+    vertical-align: middle;
+}
+.no-link:hover,
+.no-link:active,
+.no-link:focus,
+.no-link:visited {
+    text-decoration: initial;
+}
+/******** FIN Reglas Generales *************/
+
+/******** INICIO Customizacion de Modal de Bootstrap *************/
+/* Elimina espacio del titulo, cuando el modal no tiene titulo  */
+.modal-header.no-border {
+    /*padding: 0px;
+    border-width: 0px;
+    margin-bottom: -16px;*/
+    display: none;
+}
+.modal-body {
+    padding: 0px;
+}
+.modal-content {
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+.modal-body .container-fluid {
+    padding-left: 0px;
+}
+.modal-body .row {
+    margin-left: 0px;
+}
+.modal-body .close {
+    margin-right: 3px;
+    position: relative;
+    left: 14px;
+}
+/******** FIN Customizacion de Modal de Bootstrap *************/
+
+/******** INICIO Customizacion de Codecanyon *************/
+/* Se asigna un alto fijo a los iconos de los inputs */
+#slick .field select{
+    height: 38px !important;
+}
+/* Establecemes que el ancho del elemento contenedor del formulario se adapte a su contenedor padre */
+#slick {
+    width: 100% !important;
+}
+/******** FIN Customizacion de Codecanyon *************/
+
+/******** INICIO Customizacion de scrollbar *************/
+.nano > .nano-pane {
+    background: rgba(255,255,255,.25) !important;
+    width: 6px !important;
+}
+.nano > .nano-pane > .nano-slider {
+    background: rgba(255,255,255,.50) !important;
+}
+::-webkit-scrollbar {
+    width: 13px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(72, 63, 63, 0.75);
+}
+/******** FIN Customizacion de scrollbar *************/
+
+/******** INICIO Sidebar *************/
+#sidebar {
+    padding: 0px;
+    margin: 0px;
+    width: 284px;
+}
+.container-menu-toggle:hover #menu-toggle {
+    margin-left: 15px;
+}
+/*#menu-toggle {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: 13px 6px url("../img/arrow-anim-sprite.png") no-repeat;
+    -webkit-transition: margin 0.3s ease-in-out;
+    -moz-transition: margin 0.3s ease-in-out;
+    -o-transition: margin 0.3s ease-in-out;
+    transition: margin 0.3s ease-in-out;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: 2px solid white;
+    padding-top: 19px;
+    padding-left: 3px;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+#menu-toggle:hover,
+#menu-toggle.active {
+    margin-left: 15px;
+}*/
+#menu-toggle {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    /* margin: 50px auto; */
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    border: 2px solid #EE5656;
+    border-radius: 5px;
+}
+
+#menu-toggle span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 74%;
+    background: #EE5656;
+    border-radius: 4px;
+    opacity: 1;
+    left: 5px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+#menu-toggle span:nth-child(1) {
+  top: 5px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+#menu-toggle span:nth-child(2) {
+  top: 12px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+#menu-toggle span:nth-child(3) {
+  top: 19px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+#menu-toggle div {
+    font-family: "AvenirNext-Regular";
+    font-size: 6pt;
+    padding-top: 24px;
+    padding-left: 3pt;
+    color: white;
+}
+#menu-toggle.active span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 2px;
+  left: 8px;
+}
+#menu-toggle.active span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+#menu-toggle.active span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 21px;
+  left: 8px;
+}
+#sidebar > div {
+    width: 284px;
+    padding: 10px;
+}
+#btnProyectoNuevo:hover,
+#btnProyectoNuevo:active {
+    text-decoration: initial;
+}
+#btnProyectoNuevo i {
+    color: #EB585A;
+    width: 25px;
+    /*height: 25px;*/
+}
+.widget_sidebar {
+    padding-bottom: 35px;
+}
+.widget_sidebar .header {
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.widget_sidebar .header,
+#sidebar .btnBorderRed {
+    font-size: 14pt;
+    font-family: 'AvenirNext-DemiBold';
+}
+.widget_sidebar .header .icon {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.widget_sidebar.active .header .icon {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.widget_sidebar .body {
+    /*padding: 0px 0px 0px 10px;
+    margin: 0px -10px 0px -10px;*/
+    width: 284px;
+    background-color: #4B5353;
+    height: 120px;
+    margin-left: -10px;
+    /*overflow-y: auto;
+    overflow-x: hide;*/
+}
+.widget_sidebar .body ul {
+    padding: 0px;
+    color: white;
+    list-style: none;
+}
+.widget_sidebar .body ul li {
+    padding-left: 10px;
+    width: 280px;
+    height: 40px;
+    color: #BBBBBB;
+}
+.widget_sidebar .body ul li p {
+    width: 234px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.widget_sidebar .body ul li .icon {
+    background-image:url("../img/txtexpand_Inactive.png");
+    background-size: contain;
+}
+.widget_sidebar .body ul li:hover .icon {
+    background-image:url("../img/txtexpand_Active.png");
+}
+.widget_sidebar .body ul li p {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 40px;
+}
+.widget_sidebar .body ul li:hover {
+    background-color: #48c0c3;
+    color: black;
+}
+.bgColorTurquoise {
+    background-color: #48c0c3 !important;
+}
+#badges body {
+    color: white;
+}
+#sidebar hr {
+    border-top: 1px solid #CCC;
+}
+.datepicker table {
+    font-family: 'CooperHewitt-Book';
+}
+.datepicker .datepicker-switch {
+    border-bottom: 1px solid #BBBBBB;
+}
+/* Resuelve el problema de que no se ve los elementos con tooltip */
+.tooltipster {
+    font-size: inherit !important;
+    opacity: inherit !important;
+    cursor: pointer;
+}
+input.tooltipster {
+    cursor: text;
+}
+.tooltipster-content .title {
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.tooltipster-content hr {
+    border-top: 1px solid #BBBBBB;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.tooltipster-content p {
+    text-align: justify;
+}
+.day.tooltipster.active {
+    background-color: #3297CA !important;
+}
+/******** FIN Sidebar *************/
+
+/******** INICIO Header *************/
+#row-header-title,
+#sidebar,
+.item .footer {
+    background-color: #293332;
+}
+#row-header-title {
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #EC3132;
+}
+#row-header-menu {
+    height: 40px;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(204,204,204,1);
+    -moz-box-shadow: 0px 2px 10px 0px rgba(204,204,204,1);
+    box-shadow: 0px 2px 10px 0px rgba(204,204,204,1);
+    padding-top: 5px;
+}
+#row-header-title,
+#row-header-menu {
+    border-bottom: 1px solid #CCCCCC;
+}
+#row-header-title .icon_header {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+#input_search,
+#input_search:focus {
+     border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: 1px solid white;
+    height: 35px;
+    width: 215px;
+    color: black;
+    padding: 10px;
+}
+/******** FIN Header *************/
+
+/******** INICIO Menu *************/
+.menu {
+    padding-left: 0px;
+    margin-bottom: 0px !important;
+    margin-top: 3px;
+}
+.menu.noindex{
+    margin-top: 66px;
+}
+.menu li {
+    list-style: none;
+    display: inline-block;
+    font-family: "CooperHewitt-Semibold";
+    font-size: 13px;
+}
+.menu li a {
+    font-weight: bold;
+    font-style: normal;
+    color: black;
+}
+.menu li a:hover,
+.menu li a:visited
+.menu li a:active,
+.menu li a:focus {
+    text-decoration: initial;
+}
+.menu .separator {
+    border: 1px solid #CCCCCC;
+    margin-right: 2px;
+    height: 28px;
+    vertical-align: text-top;
+}
+.menu li a.active {
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+}
+.menu .badge {
+    background-color: #D85151;
+    position: relative;
+    top: -10px;
+}
+/******** FIN Menu *************/
+
+/******** FIN Contenido *************/
+/**
+* Solution column height equal
+* http://getbootstrap.com.vn/examples/equal-height-columns/
+* http://stackoverflow.com/questions/19695784/how-can-i-make-bootstrap-columns-all-the-same-height
+*/
+.row {
+    
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.title_container {
+    text-align: center;
+}
+.title_container .title {
+    font-family: 'CooperHewitt-Bold';
+    font-size: 28pt;
+    letter-spacing: -0.37pt;
+    border-bottom: 3px solid black;
+    display: inline-block;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.title_container .title2 {
+    border-bottom: 3px solid black;
+}
+.title2 {
+    font-family: 'CooperHewitt-Bold';
+    font-size: 25pt;
+    letter-spacing: -0.37pt;
+    display: inline-block;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+/******** INICIO Contenido *************/
+
+/******** INICIO Grid de concursos y proyectos *************/
+.waterfall .item {
+    margin: 0 10px 17px 0;
+    width: 274px;
+    -webkit-box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.4);
+    box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.4);
+}
+/*.waterfall .item:hover {
+    margin-top: -5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}*/
+.item .header {
+    position: relative;
+    background-color: #F2F2F2;
+}
+.item .header .title {
+    font-family: "AvenirNext-DemiBold";
+    position: absolute;
+    background-color: rgba(240,240,240,.8);
+    /*-webkit-box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.75);
+    -moz-box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.75);
+    box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.75);*/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 234px;
+    min-height: 40px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.item img {
+    width: 100%;
+    /*border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;*/
+}
+.waterfall .item .body {
+    background: #F2F2F2;
+    text-align: justify;
+}
+.item .body,
+.item .footer {
+    padding: 10px;
+}
+.item .date {
+    /*border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;*/
+    background: #EE5656;
+    width: 95%;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-family: "AvenirNext-Regular";
+}
+.item .footer {
+    /*border-radius: 0px 0px 10px 10px;
+    -moz-border-radius: 0px 0px 10px 10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 3px 7px 0px rgba(0,0,0,0.57);
+    box-shadow: 0px 5px 12px -3px rgba(0,0,0,0.57);*/
+    color: white;
+}
+.item  .footer .tag,
+.item .footer span.icon {
+    display: table-cell;
+    vertical-align: middle;
+}
+.item  .footer .tag {
+    width: 90%;
+}
+.item .footer span.icon {
+    width: 10%;
+}
+.item .footer span,
+.item .footer span i{
+    color: #EB585A;
+}
+.waterfall .item .btnModalConcurso,
+.cursor-pointer {
+    cursor: pointer;
+}
+.iconGanadores {
+    position: absolute;
+    top: 90%;
+    left: 90%;
+}
+/******** FIN Grid de concursos y proyectos *************/
+
+/******** INICIO Info General Concursos *************/
+.modal-body .item .date {
+    margin-top: 10px;
+}
+.modal-body .title_container {
+    padding-top: 30px;
+}
+.modal-body .item .header .title {
+    width: 260px;
+}
+.field-info {
+    padding-bottom: 22px;
+}
+.field-info .container-label,
+.field-info .container-text {
+    display: table-cell;
+}
+.field-info .container-text {
+    display: inline-grid;
+    width: 100%;
+    padding-left: 25px;
+    background-color: #F2F2F2;
+    vertical-align: top;
+    padding-top: 10px;
+}
+.field-info .container-label label {
+    background-color: #EE5656;
+    min-width: 107px;
+    line-height: 40px;
+    color: white;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    position: relative;
+}
+/* Flecha de la derecha */
+.field-info .container-label label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 25%;
+    margin-top: -10px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #EE5656;
+}
+.field-info .container-text select {
+    padding: 0px 31px 6px 3px;
+    width: 100%;
+    border: 0px;
+    background-color: #F2F2F2;
+}
+/******** FIN Info General Concursos *************/
+
+/******** INICIO Tabla con filas slides *************/
+.table-slide .icon_seccion.inactive {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.table-slide tr td,
+.table-slide .icon_seccion {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.table-slide tr.inactive td {
+    border: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+/******** FIN Tabla con filas slides *************/
+
+/******** INICIO Paginador *************/
+.pager.wide {
+    width: 100%;
+}
+.pager.narrow {
+    width: 200px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.pager.small {
+    width: 70px;
+    margin: 0px;
+}
+.pager a {
+    color: #293332;
+    font-style: normal;
+    text-decoration: none;
+    cursor: pointer;
+}
+.pager .next,
+.pager .prev {
+
+}
+.pager .prev {
+    float: left;
+}
+.pager .next {
+    float: right;
+}
+/******** FIN Paginador *************/
+
+/******** INICIO Progress Bar *************/
+.progess-bar {
+    height: 20px;
+    border: 1px solid #BBBBBB;
+    margin-bottom: 20px;
+}
+.progess-bar > span {
+    display: inline-block;
+    width: 10%;
+    background: #BBBBBB;
+    height: 100%;
+    border-left: 1px solid #CCC;
+    float: left;
+}
+.progess-bar > span.complete {
+    background: #EB585A;
+}
+/******** FIN Progress Bar *************/
+
+/******** INICIO Elementos Formulario *************/
+.field-input {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin-bottom: 20px;
+}
+.field-input .container-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ddd;
+    width: 38px;
+    height: 100%;
+}
+.field-input input,
+.field-input textarea,
+.field-input select,
+.field-input .select2,
+.field-input .container-input {
+    padding: 12px 20px 10px 50px;
+    width: 100%;
+    float: left;
+    border: solid 1px #ddd;
+}
+form .seccion,
+form .seccion .pagina {
+    float: left;
+}
+form .seccion .pagina.current {
+    width: 100%;
+}
+.select2.select2-container,
+.select2-search__field,
+.select2-search.select2-search--inline {
+    width: 100% !important;
+}
+.select2-container--default .select2-selection--multiple.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    color: #293332 !important;
+    background-color: transparent !important;
+}
+.select2-container--default .select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple,
+.select2-container--default .select2-selection--single {
+    border:0px !important;
+}
+.files {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* Solo para Safari */
+::i-block-chrome,select {
+    text-indent: 36px;
+}
+.files .ajax-file-upload,
+.files .ajax-file-upload:hover {
+    background-color: #EB585A;
+    -webkit-box-shadow: 0 2px 0 0 #EB585A;
+    box-shadow: 0 2px 0 0 #EB585A;
+}
+.preguntasConcurso {
+    /*max-height: 350px;*/
+    overflow: auto;
+}
+/******** FIN Elementos Formulario *************/
+
+/******** INICIO Angular *************/
+input.ng-invalid,
+select.ng-invalid,
+textarea.ng-invalid {
+    color: #a94442;
+    background-color: #f2dede;
+}
+/******** FIN Angular *************/
+
+/******** INICIO easy pie chart *************/
+.easy-pie-chart {
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    /*margin-top: 20px;*/
+    margin-bottom: 20px;
+    text-align: center;
+}
+.easy-pie-chart.small {
+    width: 80px;
+    height: 80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.easy-pie-chart.small canvas {
+    width: 100%;
+    height: 100%;
+}
+.small .percent,
+.small .number {
+    line-height: 80px;
+}
+.easy-pie-chart canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.percent,
+.number {
+    display: inline-block;
+    line-height: 110px;
+    z-index: 2;
+}
+.percent:after {
+    content: '%';
+    margin-left: 0.1em;
+    font-size: .8em;
+}
+/******** FIN easy pie chart *************/
+
+/******** INICIO Puntaje *************/
+.container-tablePuntajeProyecto {
+    margin: 25px;
+}
+.tablePuntajeProyecto > tbody > tr > td:first-child {
+    border-top: solid 2px #EB585A !important;
+    background: white;
+}
+.tablePuntajeProyecto tr > th:first-child {
+    border-bottom: solid 2px #EB585A !important;
+    background: white;
+}
+.tablePuntajeProyecto tr > td,
+.tablePuntajeProyecto tr > th {
+    border-top: none !important;
+    border-bottom: none !important
+}
+.tablePuntajeProyecto table.table {
+    background-color: inherit;
+}
+/******** FIN Puntaje *************/
+
+/******** INICIO Proyectos Evaluador *************/
+.tableProyectosEvaluador .bTopBlue {
+    border-top: solid 2px #3297CA !important;
+    background: white;
+}
+.tableProyectosEvaluador tr > td,
+.tableProyectosEvaluador tr > th {
+    border-top: none !important;
+    border-bottom: none !important
+}
+.tableProyectosEvaluador table.table {
+    background-color: inherit;
+}
+/******** Proyectos Evaluador *************/
+
+/******** INICIO Micrositio *************/
+.bgImagen {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    text-align: center;
+}
+.bgImagen.proyectosGanadores {
+    height: 200px;
+}
+.bgImagen.proyectosGanadores img {
+    padding-right: 10px;
+    padding-top: 10px;
+}
+.bgLogo {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-color: rgba(255,255,255,0.5);
+}
+.bgLogo img {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.descripcion {
+    height: 150px !important;
+    overflow: auto;
+    width: 90% !important;
+    margin-bottom: 30px;
+}
+.descripcion.nano > .nano-pane {
+    background: rgba(12, 12, 12, 0.42) !important;
+    width: 6px !important;
+}
+.descripcion_respuesta {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.menu_seccion {
+    margin-bottom: 25px;
+}
+#mosaico_secciones {
+    width: 200px;
+    padding-top: 10px;
+}
+#mosaico_secciones div {
+    text-align: center;
+    cursor: pointer;
+}
+#mosaico_secciones .fila {
+    width: 20%;
+    float: left;
+    height: 50px;
+}
+#mosaico_secciones .fila div,
+#mosaico_secciones .halfWidth {
+    height: 25px;
+}
+#mosaico_secciones .halfWidth {
+    width: 50%;
+    float: left;
+}
+.seccion {
+    padding-bottom: 20px;
+    min-height: 200px;
+}
+#mosaico_secciones .item_menu {
+    border: 1px solid white;
+}
+
+.section1.selected,.section1.hselected{
+
+    background-color: rgba(0,221,210,.75);
+}
+.section1.active,.section1.hactive{
+    background-color: #00ddd2;
+}
+
+.section2.selected,.section2.hselected{
+    background-color: rgba(31,213,255,.75);
+}
+.section2.active,.section2.hactive{
+    background-color: #1fd5ff;
+}
+
+.section3.selected,.section3.hselected{
+    background-color: rgba(255,140,6,.75);
+}
+.section3.active,.section3.hactive{
+    background-color: #ff8c1a;
+}
+
+.section4.selected,.section4.hselected{
+    background-color: #ff3976;
+}
+.section4.active,.section4.hactive{
+    background-color: #ff3976;
+}
+
+.tall-section{
+    padding-top:6px;
+    font-size:1.7em !important;
+}
+/******** FIN Micrositio *************/
+
+/******** INICIO Ganadores *************/
+.itemGanadores {
+    padding-top: 15px;
+}
+.puntajesGanador {
+    height: 300px !important;
+    overflow: auto;
+}
+.puntajesGanador.nano > .nano-pane {
+    background: rgba(12, 12, 12, 0.42) !important;
+    width: 6px !important;
+}
+/******** FIN Ganadores *************/
+
+/******** INICIO Bussiness *************/
+.themeBlue .item .date,
+.themeBlue .progess-bar > span.complete {
+    background: #3297CA;
+}
+.progess-bar.tresSecciones > span {
+    width: 33.33333%;
+}
+.progess-bar.dosSecciones > span {
+    width: 50%;
+}
+.imgEvaluador img {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+.delEvaluador {
+    visibility: hidden;
+}
+.itemEvaluador table {
+    min-height: 100px;
+}
+.itemEvaluador td,
+#seccion_rubricas td {
+    vertical-align: middle;
+}
+.itemEvaluador:hover {
+    background-color: #F2F2F2;
+}
+#seccion_list_evaluadores {
+    max-height: 400px;
+    overflow: auto;
+}
+#seccion_evaluadores .itemEvaluador:hover .delEvaluador{
+    visibility: visible;
+}
+.expertise {
+    color: lightgray;
+}
+#seccion_rubricas {
+    /* max-height: 500px; */
+    overflow: auto;
+}
+.filaEvaluacion .icon {
+    visibility: hidden;
+}
+.filaEvaluacion .icon.visible {
+    visibility: visible;
+}
+.filaEvaluacion:hover .icon {
+    visibility: visible;
+}
+/******** FIN Bussiness *************/
+
+/******** INICIO  *************/
+.ajax-file-upload-statusbar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/******** FIN *************/
+
+
+/******** INICIO Mapa *************/
+.mapa {
+    display: block;
+    width: 100%;
+    height: 80%;
+    margin: 0 auto;
+    -moz-box-shadow: 0px 5px 20px #ccc;
+    -webkit-box-shadow: 0px 5px 20px #ccc;
+    box-shadow: 0px 5px 20px #ccc;
+}
+/******** FIN Mapa *************/
+.ajax-file-upload-statusbar {
+    margin-right: auto;
+    margin-left: auto;
+}
+.dialogMapa, .ui-dialog {
+    z-index: 1000000000;
+}
+.edit_marker .form-group {
+    margin: 0px !important;
+}
+
+.badged {
+    width: 50px;
+}
+.portada_noticia {
+    height: 200px;
+}
+.modal-backdrop.in {
+   opacity: 0.05;
+}
+.cursor-text {
+    cursor: text;
+}
+/******************    Gabo************************/
+.lugar{
+    width: 60px;
+    height: 60px;
+    border-radius:30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.lugar p b{
+    padding: 30px;
+}
+.height-scroll{
+    height: 160px;
+    overflow-y: scroll;
+}
+
+
+.ajax-file-upload-filename{
+    overflow: hidden;
+}

@@ -1,0 +1,158 @@
+.thumbnail-img {
+    position:relative;
+    overflow:hidden;
+}
+.caption-img{
+    font-family: 'brando';
+    position:absolute;
+    top:120px;
+    left:0; 
+    background: -moz-linear-gradient(270deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.5)), color-stop(100%, rgba(255,255,255,0.6))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(270deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(270deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* ie10+ */
+    background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */
+    color:#666;
+    text-align:center;
+    z-index:2;
+    width:100%;
+    height:auto;
+    padding:10px;
+    display:none;
+}
+
+.thumbnail-img h2{
+    font-family: 'brando';
+    position:absolute;
+    top:10px;
+    left:0; 
+    border-radius: 5px;
+    transition:border-radius 1s ease;  
+    -webkit-transition:border-radius 1s ease; -moz-transition:border-radius 1s ease; -o-transition:border-radius 1s ease; transition:border-radius 1s ease;
+
+    background: -moz-linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.6)), color-stop(100%, rgba(255,255,255,0.5))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* ie10+ */
+    background: linear-gradient(0deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */
+    color:#666;
+    text-align:center;
+    width:100%;
+    height:90px;
+    padding:10px;
+}
+
+.thumbnail-img:hover img{
+    filter:blur(2px); 
+    -webkit-filter: blur(2px); 
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px); 
+    -ms-filter: blur(2px);
+    /*filter: url(blur.svg#blur);*/
+}
+
+.thumbnail-img:hover h2{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition:border-radius 0.0001s ease;  
+    -webkit-transition:border-radius 0.0001s ease; -moz-transition:border-radius 0.0001s ease; -o-transition:border-radius 0.0001s ease; transition:border-radius 0.0001s ease;
+}
+
+.thumbnail-img-box {
+    position:relative;
+    overflow:hidden;
+}
+.caption-img-box{
+    font-family: 'brando';
+    position:absolute;
+    top:95px;
+    left: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: -moz-linear-gradient(270deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.5)), color-stop(100%, rgba(255,255,255,0.6))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(270deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(270deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(270deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* ie10+ */
+    background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */
+    color:#666;
+    text-align:center;
+    z-index:2;
+    width:100%;
+    height:100%;
+    padding:10px;
+    display:none;
+}
+
+.thumbnail-img-box h2{
+    font-family: 'brando';
+    font-size: 1.5em;
+    position:absolute;
+    margin: auto;
+    top:0%;
+    left:0px; 
+    border-radius: 5px;
+    transition:border-radius 1.2s ease;  
+    -webkit-transition:border-radius 1.2s ease; -moz-transition:border-radius 1.2s ease; -o-transition:border-radius 1.2s ease; transition:border-radius 1.2s ease;
+
+    background: -moz-linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.6)), color-stop(100%, rgba(255,255,255,0.5))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* ie10+ */
+    background: linear-gradient(0deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.6) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* ie6-9 */
+    color:#666;
+    text-align:center;
+    width:100%;
+    height:95px;
+    padding:10px;
+}
+
+.thumbnail-img-box:hover img{
+    filter:blur(2px); 
+    -webkit-filter: blur(2px); 
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px); 
+    -ms-filter: blur(2px);
+    /*filter: url(blur.svg#blur);*/
+}
+
+.thumbnail-img-box:hover h2{
+    font-size: 2em;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition:border-radius 0.0001s ease;  
+    -webkit-transition:border-radius 0.0001s ease; -moz-transition:border-radius 0.0001s ease; -o-transition:border-radius 0.0001s ease; transition:border-radius 0.0001s ease;
+    -webkit-transition: font 0.3s ease;
+    -moz-transition: font 0.3s ease;
+    -o-transition: font 0.3s ease;
+    -ms-transition: font 0.3s ease;
+}
+
+section .col-sm-6{
+    padding-left: 20px;
+    padding-bottom: 15px;
+    height: 500px;
+}
+
+.thumbnail-img-box img
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+
+/*
+*
+* Video thumbnail
+*
+*
+*/
